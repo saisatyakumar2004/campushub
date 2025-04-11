@@ -17,7 +17,7 @@ const app = express();
 
 // Middleware
 app.use(cors({
-  origin: 'https://campushub-rho.vercel.app/', // Ensure this matches your frontend's URL
+  origin: 'https://campushub-rho.vercel.app', // Ensure this matches your frontend's URL
   methods: ['GET', 'POST', 'PATCH', 'PUT', 'DELETE'], // Add 'PATCH' here
   allowedHeaders: ['Content-Type', 'Authorization'],
 }));
