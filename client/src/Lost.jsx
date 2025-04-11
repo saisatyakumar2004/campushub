@@ -13,7 +13,7 @@ const Lost = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    axios.get('http://127.0.0.1:3001/lostfound/lost')
+    axios.get('https://campushub-9iq7.onrender.com/lostfound/lost')
       .then(response => {
         setLostItems(response.data);
         setFilteredItems(response.data);
@@ -108,11 +108,11 @@ const Lost = () => {
               </div>
               <div>
                 <img
-                  src={`http://127.0.0.1:3001/${item.image}`}
+                  src={`https://campushub-9iq7.onrender.com/${item.image}`}
                   alt={item.name}
                   width="200"
                   style={{ cursor: 'pointer', transition: 'transform 0.2s ease', borderRadius: '8px', maxWidth: '100%' }}
-                  onClick={() => handleImageClick(`http://127.0.0.1:3001/${item.image}`)}
+                  onClick={() => handleImageClick(`https://campushub-9iq7.onrender.com/${item.image}`)}
                 />
               </div>
               <button

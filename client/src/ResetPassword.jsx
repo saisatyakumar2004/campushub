@@ -19,7 +19,7 @@ function ResetPassword() {
         }
 
         axios
-            .post("http://127.0.0.1:3001/reset-password", { token, newPassword })
+            .post("https://campushub-9iq7.onrender.com/reset-password", { token, newPassword })
             .then((response) => {
                 setSuccess("Password updated successfully. Redirecting to login...");
                 setTimeout(() => navigate("/"), 3000);

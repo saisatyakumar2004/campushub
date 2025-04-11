@@ -8,7 +8,7 @@ function ForgotPassword() {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .post("http://127.0.0.1:3001/forgot-password", { email })
+      .post("https://campushub-9iq7.onrender.com/forgot-password", { email })
       .then((response) => {
         setMessage("Password reset link sent to your email!");
       })

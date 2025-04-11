@@ -12,7 +12,7 @@ function Login() {
     const handleSubmit = (e) => {
         e.preventDefault();
         axios
-            .post("http://127.0.0.1:3001/login", { email, password })
+            .post("https://campushub-9iq7.onrender.com/login", { email, password })
             .then((result) => {
                 console.log("Server Response: ", result); // Log the entire response for debugging
 

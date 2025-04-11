@@ -14,24 +14,24 @@ const AdminPortal = () => {
 
   useEffect(() => {
     axios
-      .get("http://127.0.0.1:3001/lostfound/pending")
+      .get("https://campushub-9iq7.onrender.com/lostfound/pending")
       .then((response) => setPendingItems(response.data))
       .catch((error) => console.error("Error fetching pending items:", error));
 
     axios
-      .get("http://127.0.0.1:3001/lostfound/lost")
+      .get("https://campushub-9iq7.onrender.com/lostfound/lost")
       .then((response) => setApprovedLostItems(response.data))
       .catch((error) => console.error("Error fetching approved lost items:", error));
 
     axios
-      .get("http://127.0.0.1:3001/lostfound/found")
+      .get("https://campushub-9iq7.onrender.com/lostfound/found")
       .then((response) => setApprovedFoundItems(response.data))
       .catch((error) => console.error("Error fetching approved found items:", error));
   }, []);
 
   const handleApprove = (itemId, itemType) => {
     axios
-      .patch(`http://127.0.0.1:3001/lostfound/update/${itemId}`, { status: "approved" })
+      .patch(`https://campushub-9iq7.onrender.com/lostfound/update/${itemId}`, { status: "approved" })
       .then((response) => {
         setPendingItems(pendingItems.filter((item) => item._id !== itemId));
         itemType === "lost"
@@ -43,7 +43,7 @@ const AdminPortal = () => {
 
   const handleReject = (itemId) => {
     axios
-      .patch(`http://127.0.0.1:3001/lostfound/update/${itemId}`, { status: "rejected" })
+      .patch(`https://campushub-9iq7.onrender.com/lostfound/update/${itemId}`, { status: "rejected" })
       .then(() => setPendingItems(pendingItems.filter((item) => item._id !== itemId)))
       .catch((error) => console.error("Error rejecting item:", error));
   };

@@ -23,7 +23,7 @@ const LostItemForm = () => {
     }
 
     axios
-      .post('http://127.0.0.1:3001/lostitems', formData)
+      .post('https://campushub-9iq7.onrender.com/lostitems', formData)
       .then((response) => {
         console.log('Item submitted successfully:', response);
         navigate('/');
